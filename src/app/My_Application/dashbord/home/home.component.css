@@ -1,0 +1,9 @@
+body :hover{
+    background-color: rgb(239, 142, 23);
+  }
+  body:hover{
+  background-color: red;
+  }
+  img:hover{
+    background-color: rgb(239, 142, 23);
+  }

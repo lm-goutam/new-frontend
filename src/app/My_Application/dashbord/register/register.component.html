@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Here</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        nav{
+            text-align: center;
+            padding: 10px;
+            background: #678cc4;
+            color: #000;
+        }
+        .reg-form-bg{
+            min-height: 600px;
+            background: url("regImg.jpg") no-repeat content-box;
+            background-size: contain;
+        }
+
+        footer{
+        width: 100%;
+        padding: 8px 20px;
+        position: fixed;
+        bottom: 0;
+        background: #9aa3d5;
+        color: #000;
+        text-align: center;
+        }
+
+        @media screen and (max-width: 988px) {
+            .o-1{
+                order: 2;
+            }
+            .o-2{
+                order: 1;
+            }
+            .reg-form-bg{ 
+                min-height: 20rem;
+                background-position: center;
+            }
+        }
+    </style>
+    </head>
+<body>
+    <nav>
+        <h2>www.LemmaTechnologies.com</h2>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-5 o-1 mt-3" id="regForm">
+                <div>
+                    <h4>Fill up the form to continue services</h4>
+                </div>
+            <form class="mt-5" onsubmit="formSubmit(); return false">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="password1">Password</label>
+                    <input type="password" class="form-control" id="password1" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-check-label" for="password2">Confirm password</label>
+                    <input type="password" class="form-control" id="password2" required>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Agree <a routerLink="/terms">Terms &amp; Privacy</a></label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Register</button>
+            </form>
+            </div>
+            <div class="col-md-12 col-lg-5 o-1" style="display: none;" id="afterRegtext"><h3>You Are Successfully Register Here! <a href="login.html">Log in</a></h3></div>
+            <div class="col-md-12 col-lg-7 o-2">
+            <div class="reg-form-bg" style="margin-top: 105px;"></div>
+            </div>
+    </div>
+    </div>
+    
+    <footer>
+        <p class="m-0">For More Screening And Advertisement Call Us On :- 0255-1234567...!</p>
+        <!-- <p></p> -->
+      </footer>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script>
+        function formSubmit(){
+            $("#regForm").hide()
+            $("#afterRegtext").show()
+        }
+      </script>
+         <script type="text/javascript">
+    window.onload = function () {
+var password1 = document.getElementById("password1");
+var password2 = document.getElementById("password2");
+password1.onchange = ConfirmPassword;
+password2.onkeyup = ConfirmPassword;
+function ConfirmPassword() {
+    password1.setCustomValidity("");
+if (password1.value != password2.value) {
+    password1.setCustomValidity("Passwords do not match.");
+}
+}
+}
+</script>
+</body>
+</html>
